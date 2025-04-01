@@ -39,5 +39,11 @@
         "javascript",
         "javascriptreact",
         "yaml"
+    ],
+
+    "github.copilot.chat.commitMessageGeneration.instructions": [
+        {
+            "file": ".github/copilot/commit-message-instructions.md"
+        }
     ]
 }
