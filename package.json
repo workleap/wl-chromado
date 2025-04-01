@@ -32,6 +32,10 @@
         "list-outdated-deps": "pnpm outdated --format list !eslint",
         "update-outdated-deps": "pnpm update --latest !eslint"
     },
+    "dependencies": {
+        "azure-pipelines-task-lib": "^4.17.3",
+        "chromatic": "^11.25.2"
+    },
     "devDependencies": {
         "@changesets/changelog-github": "0.5.0",
         "@changesets/cli": "2.27.9",
@@ -46,10 +50,6 @@
         "retypeapp": "3.6.0",
         "tsup": "8.3.0",
         "typescript": "5.6.3"
-    },
-    "dependencies": {
-        "azure-pipelines-task-lib": "4.17.3",
-        "chromatic": "^11.25.2"
     },
     "engines": {
         "node": ">=21.1.0"
