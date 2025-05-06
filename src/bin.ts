@@ -83,13 +83,7 @@ async function run() {
             return;
         }
 
-        // Usually happens when Chromatic skip the build because it detected that a build for the same commit has already been done.
-        if (output.url === undefined && output.storybookUrl === undefined) {
-            setResult(TaskResult.Succeeded, "A build for the same commit as the last build on the branch is considered a rebuild. You can override this using the --force-rebuild flag.");
-
-            return;
-        }
-
+        const success = output.code === 0;
         const changeCount = output.changeCount ?? 0;
         const errorCount = output.errorCount ?? 0;
 
@@ -108,7 +102,7 @@ async function run() {
         }
 
         const comment = `
-### ${errorCount > 0 || changeCount > 0 ? "❌" : "✅"} Chromatic
+### ${success ? "✅" : "❌"} Chromatic
 
 <div>
     <table>
@@ -131,7 +125,9 @@ ${errorCount === 0
         <td>
 ${changeCount === 0
         ? "✅&nbsp; None"
-        : `❌&nbsp; Found ${changeCount} visual ${changeCount === 1 ? "change" : "changes"}`
+        : success
+            ? `✅&nbsp; Accepted ${changeCount} visual ${changeCount === 1 ? "change" : "changes"}`
+            : `❌&nbsp; Found ${changeCount} visual ${changeCount === 1 ? "change" : "changes"}`
 }
         </tr>
         <tr>
@@ -167,14 +163,18 @@ ${output.inheritedCaptureCount !== 0
             accessToken: getVariable("CHROMATIC_PULL_REQUEST_COMMENT_ACCESS_TOKEN")
         });
 
-        if (errorCount > 0) {
-            setResult(TaskResult.Failed, `${errorCount} ${errorCount === 1 ? "test" : "tests"} failed.`);
-        }
+        if (success) {
+            setResult(TaskResult.Succeeded, "Chromatic succeeded.");
+        } else {
+            if (errorCount > 0) {
+                setResult(TaskResult.Failed, `${errorCount} ${errorCount === 1 ? "test" : "tests"} failed.`);
+            } else if (changeCount > 0) {
+                const message = `Found ${changeCount} visual ${changeCount === 1 ? "change" : "changes"}. Review the ${changeCount === 1 ? "change" : "changes"} and re-queue the build to proceed.`;
 
-        if (changeCount > 0) {
-            const message = `Found ${changeCount} visual ${changeCount === 1 ? "change" : "changes"}. Review the ${changeCount === 1 ? "change" : "changes"} and re-queue the build to proceed.`;
-
-            setResult(TaskResult.Failed, message);
+                setResult(TaskResult.Failed, message);
+            } else {
+                setResult(TaskResult.Failed, "Chromatic failed.");
+            }
         }
     } catch (error) {
         if (error instanceof Error) {
