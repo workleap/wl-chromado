@@ -34,7 +34,7 @@
     },
     "dependencies": {
         "azure-pipelines-task-lib": "^4.17.3",
-        "chromatic": "^11.27.0"
+        "chromatic": "^11.28.1"
     },
     "devDependencies": {
         "@changesets/changelog-github": "0.5.1",
