@@ -1,5 +1,11 @@
 # @workleap/chromatic-ado
 
+## 1.2.4
+
+### Patch Changes
+
+- [#54](https://github.com/workleap/wl-chromado/pull/54) [`1c107c3`](https://github.com/workleap/wl-chromado/commit/1c107c3893fb668aaa912d4a8b8141bb17af344e) Thanks [@tjosepo](https://github.com/tjosepo)! - Fix failing task after changes have been accepted on rerun
+
 ## 1.2.3
 
 ### Patch Changes
