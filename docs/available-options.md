@@ -20,7 +20,7 @@ Here's how you can specify additional Chromatic CLI options:
 
 In addition to Chromatic CLI options, a few environment variables are accepted 👇
 
-## CHROMATIC_DEBUG
+## `CHROMATIC_DEBUG`
 
 Add the `CHROMATIC_DEBUG` environment variable to your `chromatic.yml` pipeline to start a Chromatic build in "debug" mode and to benefit from additional logs from the Chromado:
 
@@ -35,7 +35,7 @@ Add the `CHROMATIC_DEBUG` environment variable to your `chromatic.yml` pipeline 
     CHROMATIC_DEBUG: true
 ```
 
-## CHROMATIC_DISABLE_TURBOSNAP
+## `CHROMATIC_DISABLE_TURBOSNAP`
 
 Add the `CHROMATIC_DISABLE_TURBOSNAP` environment variable to your `chromatic.yml` pipeline to start a Chromatic build without [TurboSnap](https://www.chromatic.com/docs/turbosnap/):
 
@@ -54,7 +54,7 @@ Add the `CHROMATIC_DISABLE_TURBOSNAP` environment variable to your `chromatic.ym
 We strongly encourage using TurboSnap as Chromatic snapshots are not cheap.
 !!!
 
-## CHROMATIC_DEFAULT_BRANCH
+## `CHROMATIC_DEFAULT_BRANCH`
 
 If your repository default branch is not `main`, using this option to provide the name of your repository default branch:
 
