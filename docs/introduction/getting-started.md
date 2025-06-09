@@ -1,6 +1,5 @@
 ---
 order: 100
-icon: rocket
 ---
 
 # Getting started
@@ -18,7 +17,7 @@ The Chromatic Azure Pipelines [documentation](https://www.chromatic.com/docs/azu
 Chromado resolves this by automatically providing build notifications as pull request comments whenever a Chromatic build is completed:
 
 :::align-image-left
-![Pull request notification example](./static/chromatic-pr-notification-red.png)
+![Pull request notification example](../static/chromatic-pr-notification-red.png)
 :::
 
 ### TurboSnap
@@ -28,7 +27,7 @@ Chromado is compatible with [TurboSnap](https://www.chromatic.com/docs/turbosnap
 If TurboSnap is disabled for your build, the PR message will indicate so. In some cases, such as for a _"rebuild"_, this is fine. However, in most cases, you should review the details of your Chromatic build to understand why TurboSnap was disabled:
 
 :::align-image-left
-![TurboSnap disabled warning example](./static/pr-turbosnap-disabled-2.png)
+![TurboSnap disabled warning example](../static/pr-turbosnap-disabled-2.png)
 :::
 
 !!!warning
@@ -215,7 +214,7 @@ To test your new Chromatic pipeline, follow these steps:
 5. A Chromatic build should trigger for the pull request, and a comment with the visual change should be added to it. The comment should indicate that Chromatic detected at least one visual change.
 
 :::align-image-left
-![Chromatic detected at least one visual change example](./static/chromatic-pr-notification-red.png)
+![Chromatic detected at least one visual change example](../static/chromatic-pr-notification-red.png)
 :::
 
 6. In the pull request comment, click on the "Build URL" link. Accept the changes in the [Chromatic](https://www.chromatic.com/start) application.
@@ -223,13 +222,13 @@ To test your new Chromatic pipeline, follow these steps:
 7. Re-queue the Chromatic pipeline by clicking on the "Re-queue" button of the pipeline in the pull request.
 
 :::align-image-left
-![Re-queue the Chromatic pipeline example](./static/requeue-chromatic-pipeline.png)
+![Re-queue the Chromatic pipeline example](../static/requeue-chromatic-pipeline.png)
 :::
 
 8. Once the Chromatic pipeline completes successfully, merge the pull request.
 
 :::align-image-left
-![Chromatic successfully completed example](./static/chromatic-pr-notification-green.png)
+![Chromatic successfully completed example](../static/chromatic-pr-notification-green.png)
 :::
 
 9. A new Chromatic build should automatically trigger for the `main` branch. The changes from this new build should be automatically accepted by Chromatic, and the pipeline should complete successfully.

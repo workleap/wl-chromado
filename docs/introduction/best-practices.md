@@ -1,6 +1,5 @@
 ---
 order: 90
-icon: north-star
 ---
 
 To help Workleap stay within its monthly Chromatic snapshot budget, we ask teams to follow these best practices:
@@ -14,13 +13,13 @@ You can log into [Chromatic](https://www.chromatic.com/) and navigate to a build
 :white_check_mark: Good
 
 :::align-image-left
-![Turbosnap runned example](./static/turbosnap-good.png){width=298 height=185}
+![Turbosnap runned example](../static/turbosnap-good.png){width=298 height=185}
 :::
 
 :no_entry_sign: Bad
 
 :::align-image-left
-![Turnbosnap failed example](./static/turbosnap-bad.png){width=302 height=273}
+![Turnbosnap failed example](../static/turbosnap-bad.png){width=302 height=273}
 :::
 
 ## Manually queue the Chromatic pipeline
@@ -34,13 +33,13 @@ To configure this:
 - Change the trigger from `Automatic` to `Manual`
 
 :::align-image-left
-![How to manually change the trigger for the Chromatic pipeline in Azure DevOps](./static/ado-manual-trigger.png)
+![How to manually change the trigger for the Chromatic pipeline in Azure DevOps](../static/ado-manual-trigger.png)
 :::
 
 When the pull request has passed review, trigger the pipeline manually:
 
 :::align-image-left
-![Manual queue button in Azure DevOps interface](./static/ado-manual-queue.png)
+![Manual queue button in Azure DevOps interface](../static/ado-manual-queue.png)
 :::
 
 ## Create small, fast-merging PRs for changes that disable TurboSnap
@@ -60,7 +59,7 @@ We recommend making these changes in small, focused PRs and **merging** them **a
 You can **identify** builds where **TurboSnap** is **disabled** by navigating to the build's details and looking for the _"TurboSnap"_ **ribbon** on the **right**. For instance, Chromatic may indicate that a _"full build"_ was triggered due to a change in the `.storybook/preview.ts[x]` file, possibly because React providers were updated, localized resources were modified, etc.
 
 :::align-image-left
-![](./static/turbosnap-bad.png){width=302 height=273}
+![](../static/turbosnap-bad.png){width=302 height=273}
 :::
 
 You can play with the [untraced](https://www.chromatic.com/docs/configure/#untraced) setting of your project's `chromatic.config.json` file to tell chromatic to ignore some of these files:
