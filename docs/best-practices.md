@@ -23,15 +23,27 @@ You can log into [Chromatic](https://www.chromatic.com/) and navigate to a build
 ![](./static/turbosnap-bad.png){width=302 height=273}
 :::
 
-## Merge PRs quickly
+## Manually queue the Chromatic pipeline
 
-We often see PRs that stay open for multiple days or weeks with daily commits. Avoid this, as new snapshots (or TurboSnaps, which still cost 1/5th of a regular snapshot) are captured **every time a commit is pushed**.
+Avoid triggering the Chromatic pipeline automatically in your CI. Instead, run it manually after the pull request has been reviewed and is ready to merge.
 
-As a general rule, once a PR is open and ready for review, there should be **no more than 5-10 additional commits**.
+Do not run your CI Chromatic pipeline automatically. Instead, queue the Chromatic pipeline once the PR has been reviewed and is ready to be merged.
 
-To help with this, if you need to share a PR that isn't ready for review, you can open it as a [draft](https://learn.microsoft.com/en-us/azure/devops/repos/git/pull-requests?view=azure-devops&tabs=browser#create-draft-prs). The Chromatic CLI "step" will not run for PRs marked as "draft".
+To configure this:
 
-> Be sure to either add `drafts: false` to your pipeline configuration or that your build policies do not run for "draft" PRs.
+- Navigate to the `default` branch policies (usually `main`) in Azure DevOps
+- Locate the Chromatic pipeline in the list
+- Change the trigger from `Automatic` to `Manual`
+
+:::align-image-left
+![](./static/ado-manual-trigger.png)
+:::
+
+When the pull request has passed review, trigger the pipeline manually:
+
+:::align-image-left
+![](./static/ado-manual-queue.png)
+:::
 
 ## Create small, fast-merging PRs for changes that disable TurboSnap
 
@@ -61,28 +73,6 @@ You can play with the [untraced](https://www.chromatic.com/docs/configure/#untra
     "untraced": ["**/package.json"]
 }
 ```
-
-## Manually queue the Chromatic pipeline
-
-Avoid triggering the Chromatic pipeline automatically in your CI. Instead, run it manually after the pull request has been reviewed and is ready to merge.
-
-Do not run your CI Chromatic pipeline automatically. Instead, queue the Chromatic pipeline once the PR has been reviewed and is ready to be merged.
-
-To configure this:
-
-- Navigate to the `default` branch policies (usually `main`) in Azure DevOps
-- Locate the Chromatic pipeline in the list
-- Change the trigger from `Automatic` to `Manual`
-
-:::align-image-left
-![](./static/ado-manual-trigger.png)
-:::
-
-When the pull request has passed review, trigger the pipeline manually:
-
-:::align-image-left
-![](./static/ado-manual-queue.png)
-:::
 
 ## Avoid importing modules from barrel files
 
