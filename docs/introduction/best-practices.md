@@ -19,7 +19,7 @@ You can log into [Chromatic](https://www.chromatic.com/) and navigate to a build
 :no_entry_sign: Bad
 
 :::align-image-left
-![Turnbosnap failed example](../static/turbosnap-bad.png){width=302 height=273}
+![Turbosnap failed example](../static/turbosnap-bad.png){width=302 height=273}
 :::
 
 ## Manually queue the Chromatic pipeline
