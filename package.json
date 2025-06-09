@@ -47,7 +47,7 @@
         "eslint": "8.57.0",
         "installed-check": "9.3.0",
         "knip": "5.46.4",
-        "retypeapp": "3.7.0",
+        "retypeapp": "3.10.0",
         "tsup": "8.4.0",
         "typescript": "5.8.2"
     },
