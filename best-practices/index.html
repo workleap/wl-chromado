@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/wl-chromado">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.10.0.802794658332">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.10.0.802795186709">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.10.0">
@@ -34,12 +34,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link href="../static/favicon.png" rel="icon">
-    <link href="../resources/css/retype.css?v=3.10.0.802794658332" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.10.0.802795186709" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.10.0.802794658332" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.10.0.802795186709" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.10.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.10.0.802794658332" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.10.0.802794658332" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.10.0.802795186709" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.10.0.802795186709" defer></script>
 
     <link href="https://workleap.github.io/wl-idp-docs-hub/static/retype-customization.css" rel="stylesheet" />
 
@@ -296,30 +296,44 @@
 <p>You can log into <a href="https://www.chromatic.com/" class="outbound" target="_blank">Chromatic</a> and navigate to a build&#x27;s details to confirm if TurboSnap is enabled for a specific build. If you don&#x27;t see the <em>&quot;TurboSnap&quot;</em> ribbon on the right side of the screen, it most likely means TurboSnap is not enabled for that project.</p>
 <p><span class="docs-emoji">&#x2705;</span> Good</p>
 <div class="align-image-left"><p><figure class="content-center">
-    <img src="../static/turbosnap-good.png" alt="" width="298" height="185" />
-    <figcaption class="caption"></figcaption>
+    <img src="../static/turbosnap-good.png" alt="Turbosnap runned example" width="298" height="185" />
+    <figcaption class="caption">Turbosnap runned example</figcaption>
 </figure>
 </p>
 </div>
 <p><span class="docs-emoji">&#x1F6AB;</span> Bad</p>
 <div class="align-image-left"><p><figure class="content-center">
-    <img src="../static/turbosnap-bad.png" alt="" width="302" height="273" />
-    <figcaption class="caption"></figcaption>
+    <img src="../static/turbosnap-bad.png" alt="Turnbosnap failed example" width="302" height="273" />
+    <figcaption class="caption">Turnbosnap failed example</figcaption>
 </figure>
 </p>
 </div>
-<doc-anchor-target id="merge-prs-quickly">
+<doc-anchor-target id="manually-queue-the-chromatic-pipeline">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#merge-prs-quickly">#</doc-anchor-trigger>
-        <span>Merge PRs quickly</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#manually-queue-the-chromatic-pipeline">#</doc-anchor-trigger>
+        <span>Manually queue the Chromatic pipeline</span>
     </h2>
 </doc-anchor-target>
-<p>We often see PRs that stay open for multiple days or weeks with daily commits. Avoid this, as new snapshots (or TurboSnaps, which still cost 1/5th of a regular snapshot) are captured <strong>every time a commit is pushed</strong>.</p>
-<p>As a general rule, once a PR is open and ready for review, there should be <strong>no more than 5-10 additional commits</strong>.</p>
-<p>To help with this, if you need to share a PR that isn&#x27;t ready for review, you can open it as a <a href="https://learn.microsoft.com/en-us/azure/devops/repos/git/pull-requests?view=azure-devops&amp;tabs=browser#create-draft-prs" class="outbound" target="_blank">draft</a>. The Chromatic CLI &quot;step&quot; will not run for PRs marked as &quot;draft&quot;.</p>
-<blockquote>
-<p>Be sure to either add <code v-pre>drafts: false</code> to your pipeline configuration or that your build policies do not run for &quot;draft&quot; PRs.</p>
-</blockquote>
+<p>Avoid triggering the Chromatic pipeline automatically in your CI. Instead, run it manually after the pull request has been reviewed and is ready to merge.</p>
+<p>To configure this:</p>
+<ul>
+<li>Navigate to the <code v-pre>default</code> branch policies (usually <code v-pre>main</code>) in Azure DevOps</li>
+<li>Locate the Chromatic pipeline in the list</li>
+<li>Change the trigger from <code v-pre>Automatic</code> to <code v-pre>Manual</code></li>
+</ul>
+<div class="align-image-left"><p><figure class="content-center">
+    <img src="../static/ado-manual-trigger.png" alt="How to manually change the trigger for the Chromatic pipeline in Azure DevOps" />
+    <figcaption class="caption">How to manually change the trigger for the Chromatic pipeline in Azure DevOps</figcaption>
+</figure>
+</p>
+</div>
+<p>When the pull request has passed review, trigger the pipeline manually:</p>
+<div class="align-image-left"><p><figure class="content-center">
+    <img src="../static/ado-manual-queue.png" alt="Manual queue button in Azure DevOps interface" />
+    <figcaption class="caption">Manual queue button in Azure DevOps interface</figcaption>
+</figure>
+</p>
+</div>
 <doc-anchor-target id="create-small-fast-merging-prs-for-changes-that-disable-turbosnap">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#create-small-fast-merging-prs-for-changes-that-disable-turbosnap">#</doc-anchor-trigger>
@@ -351,33 +365,6 @@
     &quot;untraced&quot;: [&quot;**/package.json&quot;]
 }</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="manually-queue-the-chromatic-pipeline">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#manually-queue-the-chromatic-pipeline">#</doc-anchor-trigger>
-        <span>Manually queue the Chromatic pipeline</span>
-    </h2>
-</doc-anchor-target>
-<p>Avoid triggering the Chromatic pipeline automatically in your CI. Instead, run it manually after the pull request has been reviewed and is ready to merge.</p>
-<p>Do not run your CI Chromatic pipeline automatically. Instead, queue the Chromatic pipeline once the PR has been reviewed and is ready to be merged.</p>
-<p>To configure this:</p>
-<ul>
-<li>Navigate to the <code v-pre>default</code> branch policies (usually <code v-pre>main</code>) in Azure DevOps</li>
-<li>Locate the Chromatic pipeline in the list</li>
-<li>Change the trigger from <code v-pre>Automatic</code> to <code v-pre>Manual</code></li>
-</ul>
-<div class="align-image-left"><p><figure class="content-center">
-    <img src="../static/ado-manual-trigger.png" alt="" />
-    <figcaption class="caption"></figcaption>
-</figure>
-</p>
-</div>
-<p>When the pull request has passed review, trigger the pipeline manually:</p>
-<div class="align-image-left"><p><figure class="content-center">
-    <img src="../static/ado-manual-queue.png" alt="" />
-    <figcaption class="caption"></figcaption>
-</figure>
-</p>
-</div>
 <doc-anchor-target id="avoid-importing-modules-from-barrel-files">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#avoid-importing-modules-from-barrel-files">#</doc-anchor-trigger>
