@@ -14,13 +14,13 @@ You can log into [Chromatic](https://www.chromatic.com/) and navigate to a build
 :white_check_mark: Good
 
 :::align-image-left
-![](./static/turbosnap-good.png){width=298 height=185}
+![Turbosnap runned example](./static/turbosnap-good.png){width=298 height=185}
 :::
 
 :no_entry_sign: Bad
 
 :::align-image-left
-![](./static/turbosnap-bad.png){width=302 height=273}
+![Turnbosnap failed example](./static/turbosnap-bad.png){width=302 height=273}
 :::
 
 ## Manually queue the Chromatic pipeline
@@ -34,13 +34,13 @@ To configure this:
 - Change the trigger from `Automatic` to `Manual`
 
 :::align-image-left
-![](./static/ado-manual-trigger.png)
+![Manual trigger configuration in Azure DevOps interface](./static/ado-manual-trigger.png)
 :::
 
 When the pull request has passed review, trigger the pipeline manually:
 
 :::align-image-left
-![](./static/ado-manual-queue.png)
+![Manual queue button in Azure DevOps interface](./static/ado-manual-queue.png)
 :::
 
 ## Create small, fast-merging PRs for changes that disable TurboSnap
