@@ -4,42 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/wl-chromado">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.10.0.802795186709">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.10.0.802809179680">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.10.0">
 
     <!-- Primary Meta Tags -->
-    <title>Getting started</title>
-    <meta name="title" content="Getting started">
-    <meta name="description" content="Welcome to the Chromado documentation, a library to seamlessly integrate Chromatic+ Azure Pipelines.">
+    <title>Available options</title>
+    <meta name="title" content="Available options">
+    <meta name="description" content="Most of Chromatic CLI options are accepted by Chromado. If an option is not accepted, Chromado will output an error message.">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://workleap.github.io/wl-chromado/getting-started/">
+    <link rel="canonical" href="https://workleap.github.io/wl-chromado/introduction/available-options/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://workleap.github.io/wl-chromado/getting-started/">
-    <meta property="og:title" content="Getting started">
-    <meta property="og:description" content="Welcome to the Chromado documentation, a library to seamlessly integrate Chromatic+ Azure Pipelines.">
-    <meta property="og:image" content="https://workleap.github.io/wl-chromado/static/chromatic-pr-notification-red.png">
+    <meta property="og:url" content="https://workleap.github.io/wl-chromado/introduction/available-options/">
+    <meta property="og:title" content="Available options">
+    <meta property="og:description" content="Most of Chromatic CLI options are accepted by Chromado. If an option is not accepted, Chromado will output an error message.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://workleap.github.io/wl-chromado/getting-started/">
-    <meta property="twitter:title" content="Getting started">
-    <meta property="twitter:description" content="Welcome to the Chromado documentation, a library to seamlessly integrate Chromatic+ Azure Pipelines.">
-    <meta property="twitter:image" content="https://workleap.github.io/wl-chromado/static/chromatic-pr-notification-red.png">
+    <meta property="twitter:url" content="https://workleap.github.io/wl-chromado/introduction/available-options/">
+    <meta property="twitter:title" content="Available options">
+    <meta property="twitter:description" content="Most of Chromatic CLI options are accepted by Chromado. If an option is not accepted, Chromado will output an error message.">
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../static/favicon.png" rel="icon">
-    <link href="../resources/css/retype.css?v=3.10.0.802795186709" rel="stylesheet">
+    <link href="../../static/favicon.png" rel="icon">
+    <link href="../../resources/css/retype.css?v=3.10.0.802809179680" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.10.0.802795186709" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../resources/js/retype.js?v=3.10.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.10.0.802795186709" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.10.0.802795186709" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.10.0.802809179680" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.10.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.10.0.802809179680" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.10.0.802809179680" defer></script>
 
     <link href="https://workleap.github.io/wl-idp-docs-hub/static/retype-customization.css" rel="stylesheet" />
 
@@ -62,10 +60,10 @@
                                 <path d="M10.6763 23.0822C10.4303 23.328 10.0967 23.4661 9.74885 23.4661C9.40103 23.4661 9.06744 23.328 8.82135 23.0822L1.38384 15.6447C1.13806 15.3986 1 15.065 1 14.7172C1 14.3694 1.13806 14.0358 1.38384 13.7897L8.82135 6.35222C9.0703 6.1205 9.39939 5.99432 9.73945 6.0002C10.0795 6.00607 10.404 6.14354 10.6448 6.38372C10.885 6.62452 11.0225 6.94906 11.0284 7.28912C11.0342 7.62917 10.9081 7.95826 10.6763 8.20722L4.16635 14.7172L10.6763 21.2272C10.9221 21.4733 11.0602 21.8069 11.0602 22.1547C11.0602 22.5025 10.9221 22.8361 10.6763 23.0822Z" />
                             </svg>
                         </a>
-                        <a id="retype-branding-logo" href="../" class="flex items-center leading-snug text-2xl">
+                        <a id="retype-branding-logo" href="../../" class="flex items-center leading-snug text-2xl">
                             <span class="w-10 mr-2 grow-0 shrink-0 overflow-hidden">
-                                <img class="max-h-10 dark:hidden md:inline-block" src="../static/logo.png">
-                                <img class="max-h-10 hidden dark:inline-block" src="../static/logo.png">
+                                <img class="max-h-10 dark:hidden md:inline-block" src="../../static/logo.png">
+                                <img class="max-h-10 hidden dark:inline-block" src="../../static/logo.png">
                             </span>
                             <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">Chromado</span>
                         </a>
@@ -79,7 +77,7 @@
                     <nav id="retype-header-nav" class="hidden md:flex">
                         <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
                             <li class="mr-6">
-                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../getting-started/">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../introduction/getting-started/">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
                                         <g fill="currentColor">
                                             <path d="M11.03 2.59a1.501 1.501 0 0 1 1.94 0l7.5 6.363a1.5 1.5 0 0 1 .53 1.144V19.5a1.5 1.5 0 0 1-1.5 1.5h-5.75a.75.75 0 0 1-.75-.75V14h-2v6.25a.75.75 0 0 1-.75.75H4.5A1.5 1.5 0 0 1 3 19.5v-9.403c0-.44.194-.859.53-1.144ZM12 3.734l-7.5 6.363V19.5h5v-6.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v6.25h5v-9.403Z"/>
@@ -203,7 +201,7 @@
                             <nav>
                                 <ul class="flex flex-wrap justify-center items-center">
                                     <li class="mr-6">
-                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../getting-started/">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../introduction/getting-started/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
                                                 <g fill="currentColor">
                                                     <path d="M11.03 2.59a1.501 1.501 0 0 1 1.94 0l7.5 6.363a1.5 1.5 0 0 1 .53 1.144V19.5a1.5 1.5 0 0 1-1.5 1.5h-5.75a.75.75 0 0 1-.75-.75V14h-2v6.25a.75.75 0 0 1-.75.75H4.5A1.5 1.5 0 0 1 3 19.5v-9.403c0-.44.194-.859.53-1.144ZM12 3.734l-7.5 6.363V19.5h5v-6.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v6.25h5v-9.403Z"/>
@@ -278,355 +276,51 @@
                             <div class="retype-markdown" id="retype-content">
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="retype-sidebar-right-toggle"></div>
+                                <nav id="retype-breadcrumb" class="breadcrumb" aria-label="Breadcrumb">
+                                    <ol role="list">
+                                        <li class="pr-4">
+                                            <span class="pr-4">
+                                                Introduction
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                                <path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/>
+                                            </svg>
+                                        </li>
+                                        <li class="pr-4">
+                                            <a href="../../introduction/available-options/" class="pr-4">
+                                                Available options
+                                            </a>
+                                        </li>
+                                    </ol>
+                                </nav>
+                
                                 <!-- Page content  -->
-<doc-anchor-target id="getting-started" class="break-words">
+<doc-anchor-target id="available-options" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#getting-started">#</doc-anchor-trigger>
-        <span>Getting started</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#available-options">#</doc-anchor-trigger>
+        <span>Available options</span>
     </h1>
 </doc-anchor-target>
-<p>Welcome to the Chromado documentation, a library to seamlessly integrate <a href="https://www.chromatic.com/" class="outbound" target="_blank">Chromatic</a> + <a href="https://azure.microsoft.com/en-ca/products/devops/pipelines" class="outbound" target="_blank">Azure Pipelines</a>. On this page, you&#x27;ll discover how this package can optimize your workflow and learn how to set it up for your environment.</p>
-<doc-anchor-target id="features">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#features">#</doc-anchor-trigger>
-        <span>Features</span>
-    </h2>
-</doc-anchor-target>
-<p>Chromado aims to provide a workflow similar to the native Chromatic <a href="https://www.chromatic.com/docs/github-actions/" class="outbound" target="_blank">GitHub integration</a>. While it&#x27;s hardly as good, it&#x27;s a functional workflow until Chromatic offers a native Azure Pipelines integration.</p>
-<doc-anchor-target id="build-notifications">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#build-notifications">#</doc-anchor-trigger>
-        <span>Build notifications</span>
-    </h3>
-</doc-anchor-target>
-<p>The Chromatic Azure Pipelines <a href="https://www.chromatic.com/docs/azure-pipelines/" class="outbound" target="_blank">documentation</a> explains how to integrate Chromatic within an existing pipeline through its CLI, but it&#x27;s basically it, it lacks build notifications, it&#x27;s up to you to figure out this part.</p>
-<p>Chromado resolves this by automatically providing build notifications as pull request comments whenever a Chromatic build is completed:</p>
-<div class="align-image-left"><p><figure class="content-center">
-    <img src="../static/chromatic-pr-notification-red.png" alt="Pull request notification example" />
-    <figcaption class="caption">Pull request notification example</figcaption>
-</figure>
-</p>
-</div>
-<doc-anchor-target id="turbosnap">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#turbosnap">#</doc-anchor-trigger>
-        <span>TurboSnap</span>
-    </h3>
-</doc-anchor-target>
-<p>Chromado is compatible with <a href="https://www.chromatic.com/docs/turbosnap/" class="outbound" target="_blank">TurboSnap</a> and will by default trigger Chromatic builds with TurboSnap activated.</p>
-<p>If TurboSnap is disabled for your build, the PR message will indicate so. In some cases, such as for a <em>&quot;rebuild&quot;</em>, this is fine. However, in most cases, you should review the details of your Chromatic build to understand why TurboSnap was disabled:</p>
-<div class="align-image-left"><p><figure class="content-center">
-    <img src="../static/pr-turbosnap-disabled-2.png" alt="TurboSnap disabled warning example" />
-    <figcaption class="caption">TurboSnap disabled warning example</figcaption>
-</figure>
-</p>
-</div>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-yellow-500"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr-lg rounded-br-lg doc-callout bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-yellow-500" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M22.48 15.59L14.01 1.45A2.968 2.968 0 0012.16.09c-.78-.19-1.58-.07-2.27.35-.41.25-.76.6-1.01 1.01v.01L.4 15.6c-.83 1.43-.33 3.27 1.1 4.1.45.26.95.4 1.48.4h16.95c.8-.01 1.55-.33 2.11-.9.56-.57.87-1.33.86-2.13a3.04 3.04 0 00-.42-1.48zm-1.87 2.21c-.19.19-.44.3-.69.3H2.99c-.17 0-.34-.05-.49-.13a.992.992 0 01-.37-1.35L10.6 2.48c.08-.14.2-.25.34-.33a.992.992 0 011.37.33l8.46 14.13c.09.15.13.32.13.49 0 .26-.1.51-.29.7z"></path>
-                    <path d="M11.45 12.1c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1s-1 .45-1 1v4c0 .56.45 1 1 1zM11.46 14.1c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p>Using TurboSnap is important because we pay for every snapshot captured by Chromatic. We still pay for TurnoSnaps, but they cost <strong>1/5th</strong> of a regular snapshot.</p>
-        </div>
-    </div>
-</div>
-<doc-anchor-target id="squash-merge">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#squash-merge">#</doc-anchor-trigger>
-        <span>Squash merge</span>
-    </h3>
-</doc-anchor-target>
-<p>Chromatic doesn&#x27;t offer any mechanism to support <a href="https://learn.microsoft.com/en-us/azure/devops/repos/git/merging-with-squash?view=azure-devops" class="outbound" target="_blank">squash merge</a> on Azure DevOps. This means that when using Azure DevOps as a Git provider, if you wish to keep your Chromatic <a href="https://www.chromatic.com/docs/branching-and-baselines/" class="outbound" target="_blank">baselines</a> up-to-date, you would be constrained to merging your pull requests with regular merge commits. Fortunately, Chromado implements a workflow based on Chromatic&#x27;s <a href="https://www.chromatic.com/docs/azure-pipelines/#azure-squashrebase-merge-and-the-main-branch" class="outbound" target="_blank">auto-accept-changes</a> feature, allowing pull requests to be completed with squash merges.</p>
-<p>Here&#x27;s how it works:</p>
-<ol>
-<li><p>Whenever you create or update a pull request, a Chromatic build will automatically be triggered. If the build fails, the Chromatic pipeline will fail, and the team will need to either accept the changes or fix the issues before completing the pull request. If the changes are accepted, unfortunately the <code v-pre>main</code> branch <a href="https://www.chromatic.com/docs/branching-and-baselines/" class="outbound" target="_blank">baselines</a> will not be updated.</p>
-</li>
-<li><p>To update the baselines of the <code v-pre>main</code> branch, once the pull request has been merged, a new Chromatic build will be triggered on the <code v-pre>main</code> branch. This new build will automatically accept all the changes (which is fine since they have been reviewed in the pull request) and update the <code v-pre>main</code> branch baselines.</p>
-</li>
-</ol>
-<doc-anchor-target id="setting-up-your-workflow">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#setting-up-your-workflow">#</doc-anchor-trigger>
-        <span>Setting up your workflow</span>
-    </h2>
-</doc-anchor-target>
-<p>First, let&#x27;s create a new <doc-anchor-trigger to="#create-a-new-chromatic-project">Chromatic project</doc-anchor-trigger>, then set up your <doc-anchor-trigger to="#configure-your-project">VSCode project</doc-anchor-trigger>, and finally create an <doc-anchor-trigger to="#create-a-new-azure-pipeline">Azure pipeline</doc-anchor-trigger>.</p>
-<doc-anchor-target id="create-a-new-chromatic-project">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#create-a-new-chromatic-project">#</doc-anchor-trigger>
-        <span>Create a new Chromatic project</span>
-    </h3>
-</doc-anchor-target>
-<ol>
-<li><p>Request the owner of the Chromatic <code v-pre>gsoft-inc-ado</code> organization to create a new Chromatic project for your application. Ensure that you are added as a &quot;collaborator&quot; to the new project.</p>
-</li>
-<li><p>Once created, login to <a href="https://www.chromatic.com/" class="outbound" target="_blank">Chromatic</a> and select your application project from the list.</p>
-</li>
-<li><p>Save your Chromatic project id. You can find the project id in the project URL under the <code v-pre>appId</code> parameter. For example, if your project id is <code v-pre>123</code>, the project URL would be <code v-pre>https://www.chromatic.com/manage?appId=123</code>.</p>
-</li>
-<li><p>Go to <code v-pre>Manage</code> &gt; <code v-pre>Configure</code> &gt; <code v-pre>Project</code> &gt; <code v-pre>Setup Chromatic with this project token</code> and save the project token.</p>
-</li>
-<li><p>With the Chromatic project id and token in hand, proceed to the next sections.</p>
-</li>
-</ol>
-<doc-anchor-target id="configure-your-project">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#configure-your-project">#</doc-anchor-trigger>
-        <span>Configure your project</span>
-    </h3>
-</doc-anchor-target>
-<ol>
-<li>Create a <code v-pre>chromatic.config.json</code> file at the root of your VSCode project and paste the following content:</li>
-</ol>
-<div class="codeblock-wrapper"><doc-codeblock>
-<div class="codeblock-title">chromatic.config.json</div>
-<pre translate="no" class="language-json"><code v-pre class="language-json">{
-    &quot;projectId&quot;: &quot;&lt;YOUR_CHROMATIC_PROJECT_ID&gt;&quot;
-}</code></pre>
-</doc-codeblock></div>
-<ol start="2">
-<li>Replace <code v-pre>&lt;YOUR_CHROMATIC_PROJECT_ID&gt;</code> by your Chromatic project id.</li>
-</ol>
-<doc-anchor-target id="create-a-new-azure-pipeline">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#create-a-new-azure-pipeline">#</doc-anchor-trigger>
-        <span>Create a new Azure pipeline</span>
-    </h3>
-</doc-anchor-target>
-<ol>
-<li>First, open your application project and create a new YAML file called <code v-pre>chromatic.yml</code>. This file will store the configuration of your Chromatic Azure pipeline.</li>
-</ol>
-<p>2.1. If your project already includes a <a href="https://learn.microsoft.com/en-us/azure/devops/pipelines/process/templates?view=azure-devops&amp;pivots=templates-includes" class="outbound" target="_blank">template file</a> to set up your pipelines, then paste the following configuration:</p>
+<p>Most of Chromatic <a href="https://www.chromatic.com/docs/cli/#configuration-options" class="outbound" target="_blank">CLI options</a> are accepted by Chromado. If an option is not accepted, Chromado will output an error message.</p>
+<p>Here&#x27;s how you can specify additional Chromatic CLI options:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <div class="codeblock-title">chromatic.yml</div>
-<pre translate="no" class="language-yaml" data-line="14,21,24,29,31-32"><code v-pre class="language-yaml"># Run Chromatic on the &quot;main&quot; branch after a pull request has been merged
-# (currently required to update the baseline when doing &quot;squash&quot; merge for pull requests).
-trigger:
-  branches:
-    include:
-      - main
-
-# Run Chromatic on every pull request targeting the &quot;main&quot; branch as destination
-# that is ready for review (not a draft).
-pr:
-  branches:
-    include:
-      - main
-  drafts: false
-
-steps:
-  # Chromatic needs the full Git history to compare the baselines.
-  # Checkout must happen before the setup template.
-  - checkout: self
-    displayName: Get full Git history
-    fetchDepth: 0
-
-  # Your project custom setup template.
-  - template: templates/setup.yml
-
-  - task: CmdLine@2
-    displayName: Chromatic
-    inputs:
-      script: pnpm dlx @workleap/chromado
-    env:
-      CHROMATIC_PROJECT_TOKEN: $(CHROMATIC_PROJECT_TOKEN)
-      CHROMATIC_PULL_REQUEST_COMMENT_ACCESS_TOKEN: $(PULL_REQUEST_COMMENT_ACCESS_TOKEN)</code></pre>
+<pre translate="no" class="language-yaml" data-line="4"><code v-pre class="language-yaml">- task: CmdLine@2
+  displayName: Chromatic
+  inputs:
+    script: pnpm dlx @workleap/chromado --exit-zero-on-changes
+  env:
+    CHROMATIC_PROJECT_TOKEN: $(CHROMATIC_PROJECT_TOKEN)
+    CHROMATIC_PULL_REQUEST_COMMENT_ACCESS_TOKEN: $(PULL_REQUEST_COMMENT_ACCESS_TOKEN)</code></pre>
 </doc-codeblock></div>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-blue-300"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr-lg rounded-br-lg doc-callout bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-300" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p>Most of Chromatic <a href="https://www.chromatic.com/docs/cli/#configuration-options" class="outbound" target="_blank">CLI options</a> are accepted by the <code v-pre>@workleap/chromado</code> script. If an option is not accepted, the script will output an error message.</p>
-        </div>
-    </div>
-</div>
-<p>2.2. If your project doesn&#x27;t include a template file to set up your pipelines, paste the following configuration:</p>
-<div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<div class="codeblock-title">chromatic.yml</div>
-<pre translate="no" class="language-yaml" data-line="14,21,56,58-59"><code v-pre class="language-yaml"># Run Chromatic on the &quot;main&quot; branch after a pull request has been merged
-# (currently required to update the baseline when doing &quot;squash&quot; merge for pull requests).
-trigger:
-  branches:
-    include:
-      - main
-
-# Run Chromatic on every pull request targeting the &quot;main&quot; branch as destination
-# that is ready for review (not a draft).
-pr:
-  branches:
-    include:
-      - main
-  drafts: false
-
-steps:
-  # Chromatic needs the full Git history to compare the baselines.
-  # Checkout must happen before the setup template.
-  - checkout: self
-    displayName: Get full Git history
-    fetchDepth: 0
-
-  - task: UseNode@1
-    displayName: Use Node.js &gt;=20.0.0
-    inputs:
-      version: &quot;&gt;=20.0.0&quot;
-      checkLatest: true
-
-  - task: Cache@2
-    displayName: Cache pnpm
-    inputs:
-      key: '&quot;pnpm&quot; | &quot;$(Agent.OS)&quot; | pnpm-lock.yaml'
-      restoreKeys: |
-        &quot;pnpm&quot; | &quot;$(Agent.OS)&quot;
-        &quot;pnpm&quot;
-      path: $(Pipeline.Workspace)/.pnpm-store
-
-  - script: |
-      corepack enable
-      corepack prepare pnpm@latest-8 --activate
-      pnpm config set store-dir $(Pipeline.Workspace)/.pnpm-store
-    displayName: Setup pnpm
-
-  # Optional
-  - task: npmAuthenticate@0
-    displayName: Authenticate to private npm feed
-    inputs:
-      workingFile: .npmrc
-
-  - script: pnpm install --frozen-lockfile
-    displayName: pnpm install
-
-  - task: CmdLine@2
-    displayName: Chromatic
-    inputs:
-      script: pnpm dlx @workleap/chromado
-    env:
-      CHROMATIC_PROJECT_TOKEN: $(CHROMATIC_PROJECT_TOKEN)
-      CHROMATIC_PULL_REQUEST_COMMENT_ACCESS_TOKEN: $(PULL_REQUEST_COMMENT_ACCESS_TOKEN)</code></pre>
-</doc-codeblock></div>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-blue-300"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr-lg rounded-br-lg doc-callout bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-300" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p>Most of Chromatic <a href="https://www.chromatic.com/docs/cli/#configuration-options" class="outbound" target="_blank">CLI options</a> are accepted by the <code v-pre>@workleap/chromado</code> script. If an option is not accepted, the script will output an error message.</p>
-        </div>
-    </div>
-</div>
-<ol start="3">
-<li><p>Create a new <a href="https://www.nathannellans.com/post/azure-devops-yaml-pipelines-part-1" class="outbound" target="_blank">Azure pipeline from an existing YAML file</a>. Name this new pipeline &quot;Chromatic&quot; or choose a name that best suits your project.</p>
-</li>
-<li><p>Add the newly created Chromatic pipeline as a <strong>required</strong> <a href="https://learn.microsoft.com/en-us/azure/devops/repos/git/branch-policies?view=azure-devops&amp;tabs=browser#build-validation" class="outbound" target="_blank">build validation</a> for your <code v-pre>main</code> branch. Ensure that the build validation is <strong>required</strong>. This is crucial as any visual changes detected by Chromatic will automatically be accepted on the main branch.</p>
-</li>
-<li><p>Integrate the Chromatic project id and token, saved earlier, as <a href="https://learn.microsoft.com/en-us/azure/devops/pipelines/get-started/yaml-pipeline-editor?view=azure-devops#manage-pipeline-variables" class="outbound" target="_blank">pipeline variables</a> of the newly created Chromatic pipeline. These variables should be named <code v-pre>CHROMATIC_PROJECT_TOKEN</code> and <code v-pre>CHROMATIC_PULL_REQUEST_COMMENT_ACCESS_TOKEN</code>, respectively. Optionally, you can create the <code v-pre>CHROMATIC_PULL_REQUEST_COMMENT_ACCESS_TOKEN</code> variable as a <a href="https://learn.microsoft.com/en-us/azure/devops/pipelines/process/set-secret-variables?view=azure-devops&amp;tabs=yaml%2Cbash#set-a-secret-variable-in-a-variable-group" class="outbound" target="_blank">variable group</a>.</p>
-</li>
-</ol>
-<div class="table-wrapper scrollbar overflow-hidden">
-<table class="comfortable">
-<thead>
-<tr>
-<th>Variable</th>
-<th>Permissions</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code v-pre>CHROMATIC_PULL_REQUEST_COMMENT_ACCESS_TOKEN</code></td>
-<td><strong>Pull Request Threads</strong>: Read &amp; Write</td>
-</tr>
-</tbody>
-</table>
-</div>
-<doc-anchor-target id="best-practices">
+<p>In addition to Chromatic CLI options, a few environment variables are accepted <span class="docs-emoji">&#x1F447;</span></p>
+<doc-anchor-target id="chromatic_debug">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#best-practices">#</doc-anchor-trigger>
-        <span>Best practices</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#chromatic_debug">#</doc-anchor-trigger>
+        <span><code v-pre>CHROMATIC_DEBUG</code></span>
     </h2>
 </doc-anchor-target>
-<p>Be sure to read our <a href="../best-practices/">best practices</a> page to help Workleap stay within its monthly Chromatic snapshot budget.</p>
-<doc-anchor-target id="try-it-rocket">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#try-it-rocket">#</doc-anchor-trigger>
-        <span>Try it <span class="docs-emoji">&#x1F680;</span></span>
-    </h2>
-</doc-anchor-target>
-<p>To test your new Chromatic pipeline, follow these steps:</p>
-<ol>
-<li><p>Start a Chromatic build locally by opening a terminal at the root of the project and executing the following command: <code v-pre>pnpm chromatic --project-token &lt;YOUR_CHROMATIC_PROJECT_TOKEN&gt;</code>.</p>
-</li>
-<li><p>Go to the <a href="https://www.chromatic.com/start" class="outbound" target="_blank">Chromatic</a> application and accept all the changes to create a baseline. This guide assumes that your application already includes a few <a href="https://storybook.js.org/" class="outbound" target="_blank">Storybook</a> stories.</p>
-</li>
-<li><p>Move to a new Git branch and update an existing component watched by Chromatic to trigger a visual change. Commit the change.</p>
-</li>
-<li><p>Create a pull request for your new branch in Azure DevOps.</p>
-</li>
-<li><p>A Chromatic build should automatically trigger for the pull request, and a comment with the visual change should be added to it. The comment should indicate that Chromatic detected at least one visual change.</p>
-</li>
-</ol>
-<div class="align-image-left"><p><figure class="content-center">
-    <img src="../static/chromatic-pr-notification-red.png" alt="" />
-    <figcaption class="caption"></figcaption>
-</figure>
-</p>
-</div>
-<ol start="6">
-<li><p>In the pull request comment, click on the &quot;Build URL&quot; link. Accept the changes in the <a href="https://www.chromatic.com/start" class="outbound" target="_blank">Chromatic</a> application.</p>
-</li>
-<li><p>Re-queue the Chromatic pipeline by clicking on the &quot;Re-queue&quot; button of the pipeline in the pull request.</p>
-</li>
-</ol>
-<div class="align-image-left"><p><figure class="content-center">
-    <img src="../static/requeue-chromatic-pipeline.png" alt="" />
-    <figcaption class="caption"></figcaption>
-</figure>
-</p>
-</div>
-<ol start="8">
-<li>Once the Chromatic pipeline completes successfully, merge the pull request.</li>
-</ol>
-<div class="align-image-left"><p><figure class="content-center">
-    <img src="../static/chromatic-pr-notification-green.png" alt="" />
-    <figcaption class="caption"></figcaption>
-</figure>
-</p>
-</div>
-<ol start="9">
-<li>A new Chromatic build should automatically trigger for the <code v-pre>main</code> branch. The changes from this new build should be automatically accepted by Chromatic, and the pipeline should complete successfully.</li>
-</ol>
-<doc-anchor-target id="troubleshoot-issues">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#troubleshoot-issues">#</doc-anchor-trigger>
-        <span>Troubleshoot issues</span>
-    </h3>
-</doc-anchor-target>
-<p>If you encounter <code v-pre>pnpm-lock.yaml [file] (not found)</code> when executing the Chromatic pipeline, ensure that the pipeline point to the exact location of your project <code v-pre>package-lock.yaml</code> file. For example, if your <code v-pre>package-lock.yaml</code> is nested under a <code v-pre>/frontend</code>, update <code v-pre>key: '&quot;pnpm&quot; | &quot;$(Agent.OS)&quot; | pnpm-lock.yaml'</code> for <code v-pre>key: '&quot;pnpm&quot; | &quot;$(Agent.OS)&quot; | $(System.DefaultWorkingDirectory)/frontend/pnpm-lock.yaml'</code>.</p>
-<p>If you encounter any other issues with the Chromatic pipeline, follow these steps:</p>
-<ul>
-<li>Try adding the <code v-pre>CHROMATIC_DEBUG</code> environment variable to <code v-pre>chromatic.yml</code> and review the <a href="https://learn.microsoft.com/en-us/azure/devops/pipelines/troubleshooting/review-logs?view=azure-devops&amp;tabs=windows-agent" class="outbound" target="_blank">the pipeline logs</a> for diagnosis:</li>
-</ul>
+<p>Add the <code v-pre>CHROMATIC_DEBUG</code> environment variable to your <code v-pre>chromatic.yml</code> pipeline to start a Chromatic build in &quot;debug&quot; mode and to benefit from additional logs from the Chromado:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <div class="codeblock-title">chromatic.yml</div>
 <pre translate="no" class="language-yaml" data-line="8"><code v-pre class="language-yaml">- task: CmdLine@2
@@ -638,16 +332,13 @@ steps:
     CHROMATIC_PULL_REQUEST_COMMENT_ACCESS_TOKEN: $(PULL_REQUEST_COMMENT_ACCESS_TOKEN)
     CHROMATIC_DEBUG: true</code></pre>
 </doc-codeblock></div>
-<ul>
-<li><p>Verify that the <code v-pre>CHROMATIC_PROJECT_TOKEN</code> pipeline variable value is correct. To find your Chromatic project token, log in to <a href="https://www.chromatic.com/start" class="outbound" target="_blank">Chromatic</a>, select your project in the list, and go to <code v-pre>Manage</code> &gt; <code v-pre>Configure</code> &gt; <code v-pre>Project</code> and look for <code v-pre>Setup Chromatic with this project token</code>.</p>
-</li>
-<li><p>Confirm that the <code v-pre>projectId</code> field in your <code v-pre>chromatic.config.json</code> file contains the correct project id. You can find the project id in the Chromatic project URL under the <code v-pre>appId</code> parameter. For example, if your project id is <code v-pre>123</code>, the project URL would be <code v-pre>https://www.chromatic.com/manage?appId=123</code>.</p>
-</li>
-<li><p>Ensure that the <code v-pre>PULL_REQUEST_COMMENT_ACCESS_TOKEN</code> pipeline variable value is a valid, non-expired token.</p>
-</li>
-<li><p>If issues persist, consider disabling <a href="https://www.chromatic.com/docs/turbosnap/" class="outbound" target="_blank">TurboSnap</a> by adding the <code v-pre>CHROMATIC_DISABLE_TURBOSNAP</code> environment variable the <code v-pre>chromatic.yml</code>:</p>
-</li>
-</ul>
+<doc-anchor-target id="chromatic_disable_turbosnap">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#chromatic_disable_turbosnap">#</doc-anchor-trigger>
+        <span><code v-pre>CHROMATIC_DISABLE_TURBOSNAP</code></span>
+    </h2>
+</doc-anchor-target>
+<p>Add the <code v-pre>CHROMATIC_DISABLE_TURBOSNAP</code> environment variable to your <code v-pre>chromatic.yml</code> pipeline to start a Chromatic build without <a href="https://www.chromatic.com/docs/turbosnap/" class="outbound" target="_blank">TurboSnap</a>:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <div class="codeblock-title">chromatic.yml</div>
 <pre translate="no" class="language-yaml" data-line="8"><code v-pre class="language-yaml">- task: CmdLine@2
@@ -672,10 +363,28 @@ steps:
             </svg>
         </div>
         <div class="pr-5 ml-3 w-full">
-<p>TurboSnap should be re-enabled promptly as Chromatic snapshots are not cheap. We pay for every snapshot that Chromatic takes.</p>
+<p>We strongly encourage using TurboSnap as Chromatic snapshots are not cheap.</p>
         </div>
     </div>
 </div>
+<doc-anchor-target id="chromatic_default_branch">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#chromatic_default_branch">#</doc-anchor-trigger>
+        <span><code v-pre>CHROMATIC_DEFAULT_BRANCH</code></span>
+    </h2>
+</doc-anchor-target>
+<p>If your repository default branch is not <code v-pre>main</code>, using this option to provide the name of your repository default branch:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">chromatic.yml</div>
+<pre translate="no" class="language-yaml" data-line="8"><code v-pre class="language-yaml">- task: CmdLine@2
+  displayName: Chromatic
+  inputs:
+    script: pnpm dlx @workleap/chromado
+  env:
+    CHROMATIC_PROJECT_TOKEN: $(CHROMATIC_PROJECT_TOKEN)
+    CHROMATIC_PULL_REQUEST_COMMENT_ACCESS_TOKEN: $(PULL_REQUEST_COMMENT_ACCESS_TOKEN)
+    CHROMATIC_DEFAULT_BRANCH: master</code></pre>
+</doc-codeblock></div>
 
                                 
                                 <!-- Required only on API pages -->
@@ -683,7 +392,7 @@ steps:
                             </div>
                             <footer id="retype-content-footer" class="clear-both">
                                 <div class="flex flex-wrap items-center justify-between mt-14">
-                                    <a id="retype-edit-this-page" class="my-2.5 inline-flex items-center text-sm whitespace-nowrap text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:underline" href="https://github.com/workleap/wl-chromado/blob/main/docs/getting-started.md" target="_blank" rel="noopener">
+                                    <a id="retype-edit-this-page" class="my-2.5 inline-flex items-center text-sm whitespace-nowrap text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:underline" href="https://github.com/workleap/wl-chromado/blob/main/docs/introduction/available-options.md" target="_blank" rel="noopener">
                                         <svg class="mr-1.5" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M20 12c-.55 0-1 .45-1 1v7c0 .55-.45 1-1 1H4c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h7c.55 0 1-.45 1-1s-.45-1-1-1H4C2.35 3 1 4.35 1 6v14c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3v-7c0-.55-.45-1-1-1z" /><path d="M22.21 1.79c-1.18-1.18-3.24-1.18-4.41 0l-9.5 9.5c-.13.13-.22.29-.26.46l-1 4c-.08.34.01.7.26.95.18.2.44.3.7.3.08 0 .16-.01.24-.03l4-1c.18-.04.34-.13.46-.26l9.5-9.5c1.22-1.22 1.22-3.2.01-4.42zm-1.42 3l-9.3 9.3-2.11.53.53-2.11 9.3-9.3c.42-.42 1.16-.42 1.59 0 .43.43.43 1.15-.01 1.58z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         <span>Edit this page</span>
                                     </a>
@@ -691,16 +400,16 @@ steps:
                             
                                 <nav id="retype-nextprev" class="print:hidden flex mt-14">
                                     <div class="w-1/2">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../introduction/best-practices/">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                            <span>
+                                                <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
+                                                <span class="block mt-1">Best practices</span>
+                                            </span>
+                                        </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../best-practices/">
-                                            <span>
-                                                <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Best practices</span>
-                                            </span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
-                                        </a>
                                     </div>
                                 </nav>
                             </footer>
@@ -711,7 +420,7 @@ steps:
                                 <div id="retype-footer-links" class="print:hidden">
                                     <ul class="flex flex-wrap items-center text-sm">
                                         <li>
-                                            <a class="inline-flex items-center mr-4 py-2 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 md:mb-0" href="../about/">
+                                            <a class="inline-flex items-center mr-4 py-2 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 md:mb-0" href="../../about/">
                                                 <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
                                                     <g fill="currentColor">
                                                         <path d="M10.97 8.265a1.45 1.45 0 0 0-.487.57.75.75 0 0 1-1.341-.67c.2-.402.513-.826.997-1.148C10.627 6.69 11.244 6.5 12 6.5c.658 0 1.369.195 1.934.619a2.45 2.45 0 0 1 1.004 2.006c0 1.033-.513 1.72-1.027 2.215-.19.183-.399.358-.579.508l-.147.123a4.329 4.329 0 0 0-.435.409v1.37a.75.75 0 1 1-1.5 0v-1.473c0-.237.067-.504.247-.736.22-.28.486-.517.718-.714l.183-.153.001-.001c.172-.143.324-.27.47-.412.368-.355.569-.676.569-1.136a.953.953 0 0 0-.404-.806C12.766 8.118 12.384 8 12 8c-.494 0-.814.121-1.03.265ZM13 17a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/><path d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1ZM2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5 9.5 9.5 0 0 0 2.5 12Z"/>
@@ -761,6 +470,6 @@ steps:
 
     <div id="retype-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Getting started", level: 1, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 2 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Available options", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 2 }</script>
 </body>
 </html>
