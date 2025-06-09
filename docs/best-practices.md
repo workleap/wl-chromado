@@ -27,8 +27,6 @@ You can log into [Chromatic](https://www.chromatic.com/) and navigate to a build
 
 Avoid triggering the Chromatic pipeline automatically in your CI. Instead, run it manually after the pull request has been reviewed and is ready to merge.
 
-Do not run your CI Chromatic pipeline automatically. Instead, queue the Chromatic pipeline once the PR has been reviewed and is ready to be merged.
-
 To configure this:
 
 - Navigate to the `default` branch policies (usually `main`) in Azure DevOps
