@@ -212,10 +212,10 @@ To test your new Chromatic pipeline, follow these steps:
 
 4. Create a pull request for your new branch in Azure DevOps.
 
-5. A Chromatic build should automatically trigger for the pull request, and a comment with the visual change should be added to it. The comment should indicate that Chromatic detected at least one visual change.
+5. A Chromatic build should trigger for the pull request, and a comment with the visual change should be added to it. The comment should indicate that Chromatic detected at least one visual change.
 
 :::align-image-left
-![](./static/chromatic-pr-notification-red.png)
+![Chromatic detected at least one visual change example](./static/chromatic-pr-notification-red.png)
 :::
 
 6. In the pull request comment, click on the "Build URL" link. Accept the changes in the [Chromatic](https://www.chromatic.com/start) application.
@@ -223,13 +223,13 @@ To test your new Chromatic pipeline, follow these steps:
 7. Re-queue the Chromatic pipeline by clicking on the "Re-queue" button of the pipeline in the pull request.
 
 :::align-image-left
-![](./static/requeue-chromatic-pipeline.png)
+![Re-queue the Chromatic pipeline example](./static/requeue-chromatic-pipeline.png)
 :::
 
 8. Once the Chromatic pipeline completes successfully, merge the pull request.
 
 :::align-image-left
-![](./static/chromatic-pr-notification-green.png)
+![Chromatic successfully completed example](./static/chromatic-pr-notification-green.png)
 :::
 
 9. A new Chromatic build should automatically trigger for the `main` branch. The changes from this new build should be automatically accepted by Chromatic, and the pipeline should complete successfully.
