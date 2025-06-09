@@ -34,7 +34,7 @@ To configure this:
 - Change the trigger from `Automatic` to `Manual`
 
 :::align-image-left
-![Manual trigger configuration in Azure DevOps interface](./static/ado-manual-trigger.png)
+![How to manually change the trigger for the Chromatic pipeline in Azure DevOps](./static/ado-manual-trigger.png)
 :::
 
 When the pull request has passed review, trigger the pipeline manually:
