@@ -62,6 +62,28 @@ You can play with the [untraced](https://www.chromatic.com/docs/configure/#untra
 }
 ```
 
+## Manually queue the Chromatic pipeline
+
+Avoid triggering the Chromatic pipeline automatically in your CI. Instead, run it manually after the pull request has been reviewed and is ready to merge.
+
+Do not run your CI Chromatic pipeline automatically. Instead, queue the Chromatic pipeline once the PR has been reviewed and is ready to be merged.
+
+To configure this:
+
+- Navigate to the `default` branch policies (usually `main`) in Azure DevOps
+- Locate the Chromatic pipeline in the list
+- Change the trigger from `Automatic` to `Manual`
+
+:::align-image-left
+![](./static/ado-manual-trigger.png)
+:::
+
+When the pull request has passed review, trigger the pipeline manually:
+
+:::align-image-left
+![](./static/ado-manual-queue.png)
+:::
+
 ## Avoid importing modules from barrel files
 
 Barrel files (`**/index.ts[x]`) are often problematic and should generally be avoided. This is particularly important when working with chromatic. If a barrel file is referenced in the `.storybook/preview.ts[x]` file and any module exported by that barrel file is updated, **TurboSnap** will be **disabled**, and a _"full build"_ will be triggered.
