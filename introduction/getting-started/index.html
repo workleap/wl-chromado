@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/wl-chromado">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.10.1.803675541675">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.10.1.804186803102">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.10.1">
@@ -34,12 +34,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link href="../../static/favicon.png" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.10.1.803675541675" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.10.1.804186803102" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.10.1.803675541675" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.10.1.804186803102" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.10.1" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.10.1.803675541675" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.10.1.803675541675" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.10.1.804186803102" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.10.1.804186803102" defer></script>
 
     <link href="https://workleap.github.io/wl-idp-docs-hub/static/retype-customization.css" rel="stylesheet" />
 
@@ -419,9 +419,11 @@
     </h3>
 </doc-anchor-target>
 <ol>
-<li>First, open your application project and create a new YAML file called <code v-pre>chromatic.yml</code>. This file will store the configuration of your Chromatic Azure pipeline.</li>
+<li><p>First, open your application project and create a new YAML file called <code v-pre>chromatic.yml</code>. This file will store the configuration of your Chromatic Azure pipeline.</p>
+</li>
+<li><p>Then create a <code v-pre>chromatic.yml</code> file and copy/paste the following configuration:</p>
+</li>
 </ol>
-<p>2.1. If your project already includes a <a href="https://learn.microsoft.com/en-us/azure/devops/pipelines/process/templates?view=azure-devops&amp;pivots=templates-includes" class="outbound" target="_blank">template file</a> to set up your pipelines, then paste the following configuration:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <div class="codeblock-title">chromatic.yml</div>
 <pre translate="no" class="language-yaml" data-line="14,21,24,29,31-32"><code v-pre class="language-yaml"># Run Chromatic on the &quot;main&quot; branch after a pull request has been merged
@@ -470,73 +472,10 @@ steps:
             </svg>
         </div>
         <div class="pr-5 ml-3 w-full">
-<p>Most of Chromatic <a href="https://www.chromatic.com/docs/cli/#configuration-options" class="outbound" target="_blank">CLI options</a> are accepted by the <code v-pre>@workleap/chromado</code> script. If an option is not accepted, the script will output an error message.</p>
+<p>The <code v-pre>chromatic.yml</code> file depends on a <code v-pre>setup.yml</code> Azure Pipelines <a href="https://learn.microsoft.com/en-us/azure/devops/pipelines/process/templates?view=azure-devops&amp;pivots=templates-includes" class="outbound" target="_blank">template file</a>. If your project doesn&#x27;t already include a <code v-pre>setup.yml</code> file, follow one of these guides to create it, either for a <a href="https://workleap.github.io/wl-web-configs/introduction/setup-a-ci-workflow/#setupyml" class="outbound" target="_blank">regular pipeline</a> or a <a href="https://workleap.github.io/wl-web-configs/introduction/setup-turborepo-ci-workflow/#setupyml" class="outbound" target="_blank">Turborepo pipeline</a>.</p>
         </div>
     </div>
 </div>
-<p>2.2. If your project doesn&#x27;t include a template file to set up your pipelines, paste the following configuration:</p>
-<div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<div class="codeblock-title">chromatic.yml</div>
-<pre translate="no" class="language-yaml" data-line="14,21,56,58-59"><code v-pre class="language-yaml"># Run Chromatic on the &quot;main&quot; branch after a pull request has been merged
-# (currently required to update the baseline when doing &quot;squash&quot; merge for pull requests).
-trigger:
-  branches:
-    include:
-      - main
-
-# Run Chromatic on every pull request targeting the &quot;main&quot; branch as destination
-# that is ready for review (not a draft).
-pr:
-  branches:
-    include:
-      - main
-  drafts: false
-
-steps:
-  # Chromatic needs the full Git history to compare the baselines.
-  # Checkout must happen before the setup template.
-  - checkout: self
-    displayName: Get full Git history
-    fetchDepth: 0
-
-  - task: UseNode@1
-    displayName: Use Node.js &gt;=20.0.0
-    inputs:
-      version: &quot;&gt;=20.0.0&quot;
-      checkLatest: true
-
-  - task: Cache@2
-    displayName: Cache pnpm
-    inputs:
-      key: '&quot;pnpm&quot; | &quot;$(Agent.OS)&quot; | pnpm-lock.yaml'
-      restoreKeys: |
-        &quot;pnpm&quot; | &quot;$(Agent.OS)&quot;
-        &quot;pnpm&quot;
-      path: $(Pipeline.Workspace)/.pnpm-store
-
-  - script: |
-      corepack enable
-      corepack prepare pnpm@latest-8 --activate
-      pnpm config set store-dir $(Pipeline.Workspace)/.pnpm-store
-    displayName: Setup pnpm
-
-  # Optional
-  - task: npmAuthenticate@0
-    displayName: Authenticate to private npm feed
-    inputs:
-      workingFile: .npmrc
-
-  - script: pnpm install --frozen-lockfile
-    displayName: pnpm install
-
-  - task: CmdLine@2
-    displayName: Chromatic
-    inputs:
-      script: pnpm dlx @workleap/chromado
-    env:
-      CHROMATIC_PROJECT_TOKEN: $(CHROMATIC_PROJECT_TOKEN)
-      CHROMATIC_PULL_REQUEST_COMMENT_ACCESS_TOKEN: $(PULL_REQUEST_COMMENT_ACCESS_TOKEN)</code></pre>
-</doc-codeblock></div>
 <div class="flex mb-6">
     <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-blue-300"></div>
     <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr-lg rounded-br-lg doc-callout bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
