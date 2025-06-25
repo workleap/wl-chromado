@@ -76,7 +76,7 @@ First, let's create a new [Chromatic project](#create-a-new-chromatic-project), 
 
 1. First, open your application project and create a new YAML file called `chromatic.yml`. This file will store the configuration of your Chromatic Azure pipeline.
 
-2.1. If your project already includes a [template file](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/templates?view=azure-devops&pivots=templates-includes) to set up your pipelines, then paste the following configuration:
+2. Then create a `chromatic.yml` file and copy/paste the following configuration:
 
 ```yaml !#14,21,24,29,31-32 chromatic.yml
 # Run Chromatic on the "main" branch after a pull request has been merged
@@ -114,72 +114,8 @@ steps:
 ```
 
 !!!info
-Most of Chromatic [CLI options](https://www.chromatic.com/docs/cli/#configuration-options) are accepted by the `@workleap/chromado` script. If an option is not accepted, the script will output an error message.
+The `chromatic.yml` file depends on a `setup.yml` Azure Pipelines [template file](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/templates?view=azure-devops&pivots=templates-includes). If your project doesn't already include a `setup.yml` file, follow one of these guides to create it, either for a [regular pipeline](https://workleap.github.io/wl-web-configs/introduction/setup-a-ci-workflow/#setupyml) or a [Turborepo pipeline](https://workleap.github.io/wl-web-configs/introduction/setup-turborepo-ci-workflow/#setupyml).
 !!!
-
-2.2. If your project doesn't include a template file to set up your pipelines, paste the following configuration:
-
-```yaml #14,21,56,58-59 chromatic.yml
-# Run Chromatic on the "main" branch after a pull request has been merged
-# (currently required to update the baseline when doing "squash" merge for pull requests).
-trigger:
-  branches:
-    include:
-      - main
-
-# Run Chromatic on every pull request targeting the "main" branch as destination
-# that is ready for review (not a draft).
-pr:
-  branches:
-    include:
-      - main
-  drafts: false
-
-steps:
-  # Chromatic needs the full Git history to compare the baselines.
-  # Checkout must happen before the setup template.
-  - checkout: self
-    displayName: Get full Git history
-    fetchDepth: 0
-
-  - task: UseNode@1
-    displayName: Use Node.js >=20.0.0
-    inputs:
-      version: ">=20.0.0"
-      checkLatest: true
-
-  - task: Cache@2
-    displayName: Cache pnpm
-    inputs:
-      key: '"pnpm" | "$(Agent.OS)" | pnpm-lock.yaml'
-      restoreKeys: |
-        "pnpm" | "$(Agent.OS)"
-        "pnpm"
-      path: $(Pipeline.Workspace)/.pnpm-store
-
-  - script: |
-      corepack enable
-      corepack prepare pnpm@latest-8 --activate
-      pnpm config set store-dir $(Pipeline.Workspace)/.pnpm-store
-    displayName: Setup pnpm
-
-  # Optional
-  - task: npmAuthenticate@0
-    displayName: Authenticate to private npm feed
-    inputs:
-      workingFile: .npmrc
-
-  - script: pnpm install --frozen-lockfile
-    displayName: pnpm install
-
-  - task: CmdLine@2
-    displayName: Chromatic
-    inputs:
-      script: pnpm dlx @workleap/chromado
-    env:
-      CHROMATIC_PROJECT_TOKEN: $(CHROMATIC_PROJECT_TOKEN)
-      CHROMATIC_PULL_REQUEST_COMMENT_ACCESS_TOKEN: $(PULL_REQUEST_COMMENT_ACCESS_TOKEN)
-```
 
 !!!info
 Most of Chromatic [CLI options](https://www.chromatic.com/docs/cli/#configuration-options) are accepted by the `@workleap/chromado` script. If an option is not accepted, the script will output an error message.
