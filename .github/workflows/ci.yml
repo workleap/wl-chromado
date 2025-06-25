@@ -1,6 +1,6 @@
 name: CI
 
-# Pnpm setup based on https://github.com/pnpm/action-setup#use-cache-to-reduce-installation-time
+# PNPM setup based on https://github.com/pnpm/action-setup#use-cache-to-reduce-installation-time
 
 on:
   push:
