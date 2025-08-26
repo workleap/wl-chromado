@@ -85,7 +85,7 @@ Ensure the pipeline run on private agents (mandatory to access the key vault).
 - :white_check_mark: Configure the correct Slack channel for alerts
 - :white_check_mark: A Terraform PR is mandatory for each new secret
 - :white_check_mark: Pipelines must run on private agents to access the Key Vault
-- :white_check_mark: A variable group cannot be hybrid (reference keyvault and have hardcoded variables)
+- :white_check_mark: A variable group cannot be hybrid (reference key vault and have hardcoded variables)
 
 ## Additional resources
 
