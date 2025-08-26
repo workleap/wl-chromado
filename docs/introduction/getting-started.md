@@ -127,7 +127,7 @@ Most of Chromatic [CLI options](https://www.chromatic.com/docs/cli/#configuratio
 
 5. Integrate the Chromatic project id and token, saved earlier in the newly created Chromatic pipeline:
     - Either as [pipeline variables](https://learn.microsoft.com/en-us/azure/devops/pipelines/get-started/yaml-pipeline-editor?view=azure-devops#manage-pipeline-variables) respectively named `CHROMATIC_PROJECT_TOKEN` and `CHROMATIC_PULL_REQUEST_COMMENT_ACCESS_TOKEN`.
-    - Or as a [Keeper secret](./add-keeper-secret.md) with variables respectively named `CHROMATIC-PROJECT-TOKEN-[PROJECT-NAME]` and `CHROMATIC-PULL-REQUEST-COMMENT-ACCESS-TOKEN`.
+    - Or as [Keeper secrets](./add-keeper-secrets.md) with variables respectively named `CHROMATIC-PROJECT-TOKEN-[PROJECT-NAME]` and `CHROMATIC-PULL-REQUEST-COMMENT-ACCESS-TOKEN`.
 
 | Variable | Permissions |
 | --- | --- |
