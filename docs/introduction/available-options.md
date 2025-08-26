@@ -1,3 +1,7 @@
+---
+order: 80
+---
+
 # Available options
 
 Most of Chromatic [CLI options](https://www.chromatic.com/docs/cli/#configuration-options) are accepted by Chromado. If an option is not accepted, Chromado will output an error message.
