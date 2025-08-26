@@ -125,11 +125,14 @@ Most of Chromatic [CLI options](https://www.chromatic.com/docs/cli/#configuratio
 
 4. Add the newly created Chromatic pipeline as a **required** [build validation](https://learn.microsoft.com/en-us/azure/devops/repos/git/branch-policies?view=azure-devops&tabs=browser#build-validation) for your `main` branch. Ensure that the build validation is **required**. This is crucial as any visual changes detected by Chromatic will automatically be accepted on the main branch.
 
-5. Integrate the Chromatic project id and token, saved earlier, as [pipeline variables](https://learn.microsoft.com/en-us/azure/devops/pipelines/get-started/yaml-pipeline-editor?view=azure-devops#manage-pipeline-variables) of the newly created Chromatic pipeline. These variables should be named `CHROMATIC_PROJECT_TOKEN` and `CHROMATIC_PULL_REQUEST_COMMENT_ACCESS_TOKEN`, respectively. Optionally, you can create the `CHROMATIC_PULL_REQUEST_COMMENT_ACCESS_TOKEN` variable as a [variable group](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/set-secret-variables?view=azure-devops&tabs=yaml%2Cbash#set-a-secret-variable-in-a-variable-group).
+5. Integrate the Chromatic project id and token, saved earlier in the newly created Chromatic pipeline:
+    - Either as [pipeline variables](https://learn.microsoft.com/en-us/azure/devops/pipelines/get-started/yaml-pipeline-editor?view=azure-devops#manage-pipeline-variables) respectively named `CHROMATIC_PROJECT_TOKEN` and `CHROMATIC_PULL_REQUEST_COMMENT_ACCESS_TOKEN`.
+    - Or as a [Keeper secret](./add-keeper-secret.md) with variables respectively named `CHROMATIC-PROJECT-TOKEN-[PROJECT-NAME]` and `CHROMATIC-PULL-REQUEST-COMMENT-ACCESS-TOKEN`.
 
 | Variable | Permissions |
 | --- | --- |
 | `CHROMATIC_PULL_REQUEST_COMMENT_ACCESS_TOKEN` | **Pull Request Threads**: Read & Write |
+| `CHROMATIC-PULL-REQUEST-COMMENT-ACCESS-TOKEN` | **Pull Request Threads**: Read & Write |
 
 ## Best practices
 
@@ -191,6 +194,10 @@ If you encounter any other issues with the Chromatic pipeline, follow these step
 - Verify that the `CHROMATIC_PROJECT_TOKEN` pipeline variable value is correct. To find your Chromatic project token, log in to [Chromatic](https://www.chromatic.com/start), select your project in the list, and go to `Manage` > `Configure` > `Project` and look for `Setup Chromatic with this project token`.
 
 - Confirm that the `projectId` field in your `chromatic.config.json` file contains the correct project id. You can find the project id in the Chromatic project URL under the `appId` parameter. For example, if your project id is `123`, the project URL would be `https://www.chromatic.com/manage?appId=123`.
+
+- If you are importing secrets from Keeper, make sure that:
+    - The pipeline is fetching the secrets from the right Azure subscription (`Azure subscription`) and key vault (`Key vault name`).
+    - The pipeline variables are using (`-`) rather than (`_`).
 
 - Ensure that the `PULL_REQUEST_COMMENT_ACCESS_TOKEN` pipeline variable value is a valid, non-expired token.
 
