@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/wl-chromado">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.809543608518">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.809544071584">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.11.0">
 
     <!-- Primary Meta Tags -->
-    <title>Add a secret to Keeper</title>
-    <meta name="title" content="Add a secret to Keeper">
+    <title>Add secrets to Keeper</title>
+    <meta name="title" content="Add secrets to Keeper">
     <meta name="description" content="At Workleap, most pipeline secrets are centralized in Keeper to simplify management and ensure smooth rotation when values expire.">
 
     <!-- Canonical -->
@@ -20,26 +20,26 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://workleap.github.io/wl-chromado/introduction/add-keeper-secrets/">
-    <meta property="og:title" content="Add a secret to Keeper">
+    <meta property="og:title" content="Add secrets to Keeper">
     <meta property="og:description" content="At Workleap, most pipeline secrets are centralized in Keeper to simplify management and ensure smooth rotation when values expire.">
     <meta property="og:image" content="https://workleap.github.io/wl-chromado/static/keeper-ado-variable-group.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://workleap.github.io/wl-chromado/introduction/add-keeper-secrets/">
-    <meta property="twitter:title" content="Add a secret to Keeper">
+    <meta property="twitter:title" content="Add secrets to Keeper">
     <meta property="twitter:description" content="At Workleap, most pipeline secrets are centralized in Keeper to simplify management and ensure smooth rotation when values expire.">
     <meta property="twitter:image" content="https://workleap.github.io/wl-chromado/static/keeper-ado-variable-group.png">
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link href="../../static/favicon.png" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.11.0.809543608518" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.11.0.809544071584" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.809543608518" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.809544071584" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.809543608518" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.11.0.809543608518" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.809544071584" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.11.0.809544071584" defer></script>
 
     <link href="https://workleap.github.io/wl-idp-docs-hub/static/retype-customization.css" rel="stylesheet" />
 
@@ -291,33 +291,33 @@
                                         </li>
                                         <li class="pr-4">
                                             <a href="../../introduction/add-keeper-secrets/" class="pr-4">
-                                                Add a secret to Keeper
+                                                Add secrets to Keeper
                                             </a>
                                         </li>
                                     </ol>
                                 </nav>
                 
                                 <!-- Page content  -->
-<doc-anchor-target id="add-a-secret-to-keeper" class="break-words">
+<doc-anchor-target id="add-secrets-to-keeper" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#add-a-secret-to-keeper">#</doc-anchor-trigger>
-        <span>Add a secret to Keeper</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#add-secrets-to-keeper">#</doc-anchor-trigger>
+        <span>Add secrets to Keeper</span>
     </h1>
 </doc-anchor-target>
 <p>At Workleap, most pipeline secrets are centralized in <a href="https://www.keepersecurity.com/" class="outbound" target="_blank">Keeper</a> to simplify management and ensure smooth rotation when values expire. This guide explains how to add a new secret to Keeper so it can be securely used in a Chromatic pipeline.</p>
 <p>To add a new pipeline secret to Keeper, follow those steps <span class="docs-emoji">&#x1F447;</span></p>
-<doc-anchor-target id="create-the-secret-in-keeper">
+<doc-anchor-target id="create-the-secrets-in-keeper">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#create-the-secret-in-keeper">#</doc-anchor-trigger>
-        <span>Create the secret in Keeper</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#create-the-secrets-in-keeper">#</doc-anchor-trigger>
+        <span>Create the secrets in Keeper</span>
     </h2>
 </doc-anchor-target>
 <ol>
 <li>To access production secrets in Keeper, request PIM access to the Keeper <strong>production group</strong> associated to your product or pipeline.</li>
 <li>Go to Keeper Secret Manager.</li>
-<li>Create the secret in the folder associated to your product or pipeline.</li>
+<li>Create the secrets in the folder associated to your product or pipeline.</li>
 <li>Configure the Slack channel for expiration alerts (it&#x27;s a field in Keeper).</li>
-<li>Note down the UID of the secret generated by Keeper.</li>
+<li>Note down the UID of the secrets generated by Keeper.</li>
 </ol>
 <div class="flex mb-6">
     <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-warning"></div>
@@ -331,7 +331,7 @@
             </svg>
         </div>
         <div class="pr-5 ml-3 w-full">
-<p>Use dashes (<code v-pre>-</code>) and not underscores (<code v-pre>_</code>) in the secret name (Azure key vault does not support underscores)</p>
+<p>Use dashes (<code v-pre>-</code>) and not underscores (<code v-pre>_</code>) in the secrets name (Azure key vault does not support underscores)</p>
         </div>
     </div>
 </div>
@@ -343,7 +343,7 @@
 </doc-anchor-target>
 <ol start="6">
 <li>Open a PR in the <a href="https://github.com/workleap/wl-terraform-wlplatform/blob/main/workleap/live/prod/foundation/main.tf" class="outbound" target="_blank">production Terraform repository</a>.</li>
-<li>Add the secret declaration with the Keeper UID in the module <code v-pre>pipeline-secrets</code>.</li>
+<li>Add the secrets declaration with the Keeper UID in the module <code v-pre>pipeline-secrets</code>.</li>
 </ol>
 <doc-anchor-target id="apply-terraform-changes">
     <h2>
@@ -397,7 +397,7 @@
 </p>
 </div>
 <ol start="11">
-<li>Add a new variable to the group and select the secrets created earlier in Terraform.</li>
+<li>Add new variables to the group by selecting the secrets created earlier in Terraform.</li>
 </ol>
 <div class="align-image-left"><p><figure class="content-center">
     <img src="../../static/keeper-variable-group-secrets.png" alt="" class="rounded-image-rounded border-image-border border-image-border-width" width="798" height="665" />
@@ -415,7 +415,7 @@
 <li>Modify the pipelines to:
 <ul>
 <li>Reference the variable group created in the previous steps (or an existing one).</li>
-<li>Use the variables of the secrets (with the <code v-pre>-</code>) added in the previous steps.</li>
+<li>Use the variables of the secrets added in the previous steps.</li>
 </ul>
 </li>
 </ol>
@@ -559,6 +559,6 @@ steps:
 
     <div id="retype-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Add a secret to Keeper", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 2 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Add secrets to Keeper", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 2 }</script>
 </body>
 </html>
