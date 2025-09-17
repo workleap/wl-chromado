@@ -1,0 +1,11 @@
+{
+    "$schema": "https://context7.com/schema/context7.json",
+    "projectTitle": "Workleap Chromado",
+    "description": "Toolbox to use Chromatic with Azure DevOps",
+    "folders": [
+        "docs"
+    ],
+    "excludeFolders": [
+        "docs/updating"
+    ]
+}
