@@ -1,5 +1,11 @@
 # @workleap/chromatic-ado
 
+## 1.2.5
+
+### Patch Changes
+
+- [#69](https://github.com/workleap/wl-chromado/pull/69) [`84658bc`](https://github.com/workleap/wl-chromado/commit/84658bc24087580ec8be98cf0d5fa165472bdcfb) Thanks [@patricklafrance](https://github.com/patricklafrance)! - Updated dependencies.
+
 ## 1.2.4
 
 ### Patch Changes
