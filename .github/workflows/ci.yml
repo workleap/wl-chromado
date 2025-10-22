@@ -26,13 +26,13 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v3
         with:
-          version: 9
+          version: 10.19
           run_install: false
 
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
-            node-version: ">=21.1.0"
+            node-version: ">=24.0.0"
             check-latest: true
             cache: pnpm
 
