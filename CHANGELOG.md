@@ -1,5 +1,11 @@
 # @workleap/chromatic-ado
 
+## 1.2.6
+
+### Patch Changes
+
+- [#72](https://github.com/workleap/wl-chromado/pull/72) [`4a0d3ec`](https://github.com/workleap/wl-chromado/commit/4a0d3ec0904c512f1e4d58d8237562f6ebe747fc) Thanks [@copilot-swe-agent](https://github.com/apps/copilot-swe-agent)! - Bump version to test OIDC publishing
+
 ## 1.2.5
 
 ### Patch Changes
