@@ -34,10 +34,13 @@
         "*.snap": "javascriptreact"
     },
 
-    // ESLint extension
-    "eslint.validate": [
+    "eslint.probe": [
         "javascript",
         "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "json",
+        "jsonc",
         "yaml"
     ],
 

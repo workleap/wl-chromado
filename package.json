@@ -39,17 +39,19 @@
     "devDependencies": {
         "@changesets/changelog-github": "0.5.1",
         "@changesets/cli": "2.29.7",
+        "@eslint/js": "9.38.0",
         "@types/node": "24.5.2",
-        "@typescript-eslint/parser": "8.44.0",
-        "@workleap/eslint-plugin": "3.5.0",
+        "@typescript-eslint/parser": "8.46.2",
+        "@workleap/eslint-configs": "1.0.1",
         "@workleap/tsup-configs": "3.1.0",
         "@workleap/typescript-configs": "3.0.4",
-        "eslint": "8.57.0",
+        "eslint": "9.38.0",
         "installed-check": "9.3.0",
         "knip": "5.63.1",
         "retypeapp": "3.11.0",
         "tsup": "8.5.0",
-        "typescript": "5.9.2"
+        "typescript": "5.9.2",
+        "typescript-eslint": "8.46.2"
     },
     "engines": {
         "node": ">=24.0.0"
