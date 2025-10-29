@@ -20,7 +20,7 @@
     "scripts": {
         "build": "tsup",
         "lint": "pnpm run \"/^lint:.*/\"",
-        "lint:eslint": "eslint . --max-warnings=-0 --cache --cache-location node_modules/.cache/eslint",
+        "lint:eslint": "eslint . --max-warnings=0 --cache --cache-location node_modules/.cache/eslint",
         "lint:types": "tsc",
         "changeset": "changeset",
         "ci-release": "pnpm build && changeset publish",
