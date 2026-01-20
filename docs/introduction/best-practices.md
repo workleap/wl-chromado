@@ -2,11 +2,15 @@
 order: 90
 ---
 
+!!!info
+Updated [best practices](https://workleap.github.io/wl-web-configs/chromatic/best-practices/) are now available for GitHub.
+!!!
+
 To help Workleap stay within its monthly Chromatic snapshot budget, we ask teams to follow these best practices:
 
 ## Use TurboSnap
 
-Make sure [TurboSnap](https://www.chromatic.com/docs/turbosnap/) is enabled, and periodically check how many snapshots were caputred for your builds with and without TurboSnap.
+Make sure [TurboSnap](https://www.chromatic.com/docs/turbosnap/) is enabled, and periodically check how many snapshots were captured for your builds with and without TurboSnap.
 
 You can log into [Chromatic](https://www.chromatic.com/) and navigate to a build's details to confirm if TurboSnap is enabled for a specific build. If you don't see the _"TurboSnap"_ ribbon on the right side of the screen, it most likely means TurboSnap is not enabled for that project.
 
